@@ -6,7 +6,7 @@ const createPopup = (popup, message, actions=["Yes", "No"]) => {
         const popupFragment = popup.content.cloneNode(true).children[0]
         const closeButton = popupFragment.querySelector("[data-close-button]")
         closeButton.addEventListener("click",(e) => {
-            resolve(null);
+            reject("Popup closed");
             popupFragment.remove()
         })
     
@@ -28,11 +28,15 @@ const createPopup = (popup, message, actions=["Yes", "No"]) => {
     return promise;
 }
 
+const updateOutputText = (message) => {
+    const dataOuptut = document.querySelector("[data-popup-output]")
+    dataOuptut.textContent = `You just clicked: ${message}`;
+}
+
 clickMeButton.addEventListener("click", (e) => {
     const popup = document.querySelector("[data-popup]")
-    createPopup(popup, "Test message new", ["proceed", "cancel", "other"])
-    .then((resolve) => {
-        console.log(resolve)
-    })
+    createPopup(popup, "Are you sure you want to continue?", ["Yes", "No"])
+    .then((resolve) => updateOutputText(resolve))
+    .catch(reject => console.log(reject))
 })
 

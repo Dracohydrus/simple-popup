@@ -15,15 +15,59 @@
 .popup {
     background-color: white;
     width: 500px;
-    height: 300px;
+    height: auto;
     z-index: 2;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.popupContent {
+    padding-bottom: 40px;
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.actions > button,
+.content > button {
+    background-color: rgb(50, 199, 149);
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+.actions > button:hover,
+.content > button:hover {
+    background-color: rgb(36, 224, 161);
 }
 
 .closeButton {
     background-color: inherit;
     border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin-left: 95%;
 }
 .closeButton:hover {
     font-weight: bold;
     color: red;
+}
+
+.content > button {
+    background-color: darkgrey;
+}
+.content > button:hover {
+    background-color: rgb(190, 189, 189);
 }
