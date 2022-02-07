@@ -1,0 +1,29 @@
+.background {
+    position: absolute;
+    inset: 0;
+    background-color: darkgrey;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.popupWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    background-color: white;
+    width: 500px;
+    height: 300px;
+    z-index: 2;
+}
+
+.closeButton {
+    background-color: inherit;
+    border: none;
+}
+.closeButton:hover {
+    font-weight: bold;
+    color: red;
+}
