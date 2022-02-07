@@ -57,7 +57,6 @@ visitSiteButton.addEventListener("click", (e) => {
 })
 
 const favouriteAnimalButton = document.getElementById("button4")
-console.log(favouriteAnimalButton)
 favouriteAnimalButton.addEventListener("click", (e) => {
     const popup = document.querySelector("[data-popup]")
     createPopup(popup, "Pick your favourite animal", ["Lion", "Elephant", "Giraffe", "Blue Whale", "Eagle", "Monkey", "Shark", "Zebra", "Kangaroo"])
