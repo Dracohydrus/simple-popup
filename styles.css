@@ -1,9 +1,15 @@
 .background {
     position: absolute;
     inset: 0;
-    background-color: darkgrey;
-    opacity: 0.8;
+    background-color: rgba(169, 169, 169, 0.705);
     z-index: 1;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .popupWrapper {
@@ -18,11 +24,12 @@
     height: auto;
     z-index: 2;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .popupContent {
     padding-bottom: 40px;
+    margin: 5px;
 }
 
 .message {
@@ -36,9 +43,15 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
 }
+.actions > button {
+    margin: 5px auto;
+}
+
 .actions > button,
-.content > button {
+.contentButtons > button {
     background-color: rgb(50, 199, 149);
     color: black;
     padding: 5px 10px;
@@ -46,8 +59,9 @@
     border: 1px solid grey;
     cursor: pointer;
 }
+
 .actions > button:hover,
-.content > button:hover {
+.contentButtons > button:hover {
     background-color: rgb(36, 224, 161);
 }
 
@@ -65,9 +79,9 @@
     color: red;
 }
 
-.content > button {
+.contentButtons > button {
     background-color: darkgrey;
 }
-.content > button:hover {
+.contentButtons > button:hover {
     background-color: rgb(190, 189, 189);
 }
