@@ -67,7 +67,7 @@ favouriteAnimalButton.addEventListener("click", (e) => {
 const howAwesomeButton = document.getElementById("button5")
 howAwesomeButton.addEventListener("click", (e) => {
     const popup = document.querySelector("[data-popup]")
-    createPopup(popup, "Pick your favourite animal", [1,2,3,4,5,6,7,8,9,10])
+    createPopup(popup, "How awesome are you?", [1,2,3,4,5,6,7,8,9,10])
     .then((resolve) => updateOutputText(resolve))
     .catch(reject => console.log(reject))
 })
