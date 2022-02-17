@@ -1,2 +1,2 @@
 # Simple Popup
-Simple JavaScript/HTML/CSS popup made in Vanilla Javascript
+Simple JavaScript/HTML/CSS popup made in vanilla JavaScript
